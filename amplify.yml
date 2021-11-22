@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - yarn install
+        - yarn install --ignore-engines # Work around to fix AWS Amplify's incompatible node version used during building
     build:
       commands:
         - yarn run build
